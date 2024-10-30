@@ -81,3 +81,18 @@ print("*"*75)
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
 
+numbers = []
+operation = input("Input a mathematical expression using two positive integer operands and one operator: ")
+for character in operation:
+    if character.numeric() == True:
+        numbers.append(int(character))
+if "+" in operation:
+    print(f"{numbers[0]} + {numbers[1] = {numbers[0] + numbers[1]}}")
+if "-" in operation:
+    print(f"{numbers[0]} - {numbers[1] = {numbers[0] - numbers[1]}}")
+if "*" in operation:
+    print(f"{numbers[0]} * {numbers[1] = {numbers[0] * numbers[1]}}")
+if "/" in operation:
+    print(f"{numbers[0]} / {numbers[1] = {numbers[0] / numbers[1]}}")
+if "%" in operation:
+    print(f"{numbers[0]} % {numbers[1] = {numbers[0] % numbers[1]}}")
