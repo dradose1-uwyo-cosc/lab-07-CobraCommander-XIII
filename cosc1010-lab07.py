@@ -29,6 +29,7 @@ while True:
         print("That is not a positive integer value.\n")
     
 print("*"*75)
+
 # Create a while loop that prompts a user for input of an integer value
 # Sum all inputs. When the user enters 'exit' (regardless of casing) end the loop
 # Upon ending the loop print the sum
@@ -45,7 +46,21 @@ print("*"*75)
 # The sum should start at 0 
 
 num_sum = 0 
-
+while True:
+    term = input("Please input an integer.\nType 'exit' to end. ")
+    if term.isnumeric() == True:
+        number = int(term)
+        num_sum += number
+    elif term == "exit":
+        break
+    elif "-" in term:
+        pos_num = int((term.replace("-","")))
+        number = -1*pos_num
+        num_sum += number
+    else:
+        print("That is not an integer value.")
+        pass
+    print("")
 print(f"Your final sum is {num_sum}")
 
 print("*"*75)
