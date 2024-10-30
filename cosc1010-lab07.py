@@ -1,12 +1,10 @@
-# Your Name Here
+# Reuben McGuire
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
+# 10/30/2024
+# Lab 07
+# Lab Section: 15
 # Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# 
 
 
 # Prompt the user for an upper bound 
@@ -18,9 +16,17 @@
 # You will continue to prompt the user until a proper integer value is entered
 
 factorial = 1
-
-print(f"The result of the factorial based on the given bound is {factorial}")
-
+while True:
+    upper = input("Please input a positive integer: ")
+    if upper.isnumeric() == True:
+        number = int(upper)
+        for value in range(1,number + 1):
+            factorial *= value
+        print(f"The result of the factorial based on the given bound is {factorial}")
+        break
+    else:
+        pass
+    
 print("*"*75)
 # Create a while loop that prompts a user for input of an integer values
 # Sum all inputs. When the user enters 'exit' (regardless of casing) end the loop
