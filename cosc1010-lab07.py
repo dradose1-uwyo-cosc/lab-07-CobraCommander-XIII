@@ -17,18 +17,19 @@
 
 factorial = 1
 while True:
-    upper = input("Please input a positive integer: ")
+    upper = input("Please input a positive integer.\nType 'exit' to end. ")
     if upper.isnumeric() == True:
         number = int(upper)
         for value in range(1,number + 1):
             factorial *= value
-        print(f"The result of the factorial based on the given bound is {factorial}")
+        print(f"The result of the factorial based on the given bound is {factorial}\n")
+    elif upper.lower() == "exit":
         break
     else:
-        pass
+        print("That is not a positive integer value.\n")
     
 print("*"*75)
-# Create a while loop that prompts a user for input of an integer values
+# Create a while loop that prompts a user for input of an integer value
 # Sum all inputs. When the user enters 'exit' (regardless of casing) end the loop
 # Upon ending the loop print the sum
 # Your program should accept both positive and negative input
