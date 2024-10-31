@@ -4,7 +4,7 @@
 # Lab 07
 # Lab Section: 15
 # Sources, people worked with, help given to: 
-# 
+# Chauncy Hendon
 
 
 # Prompt the user for an upper bound 
@@ -81,23 +81,23 @@ print("*"*75)
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
 
-While True:
+while True:
     numbers = []
     operation = input("Input a mathematical expression using two positive integer operands and one operator: ")
     for character in operation:
-        if character.numeric() == True:
+        if character.isnumeric() == True:
             numbers.append(int(character))
     if "+" in operation:
-        print(f"{numbers[0]} + {numbers[1] = {numbers[0] + numbers[1]}}")
+        print(f"{numbers[0]} + {numbers[1]} = {numbers[0] + numbers[1]}")
     elif "-" in operation:
-        print(f"{numbers[0]} - {numbers[1] = {numbers[0] - numbers[1]}}")
+        print(f"{numbers[0]} - {numbers[1]} = {numbers[0] - numbers[1]}")
     elif "*" in operation:
-        print(f"{numbers[0]} * {numbers[1] = {numbers[0] * numbers[1]}}")
+        print(f"{numbers[0]} * {numbers[1]} = {numbers[0] * numbers[1]}")
     elif "/" in operation:
-        print(f"{numbers[0]} / {numbers[1] = {numbers[0] / numbers[1]}}")
+        print(f"{numbers[0]} / {numbers[1]} = {numbers[0] / numbers[1]}")
     elif "%" in operation:
-        print(f"{numbers[0]} % {numbers[1] = {numbers[0] % numbers[1]}}")
-    elif operation = "exit":
+        print(f"{numbers[0]} % {numbers[1]} = {numbers[0] % numbers[1]}")
+    elif operation == "exit":
         break
     else:
         pass
